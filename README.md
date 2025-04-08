@@ -69,6 +69,12 @@ If you want to build the game for production:
 npm run build
 # or
 yarn build
+# SCREENSHOTS
+![Screenshot 2025-04-08 at 04-00-07 v0](https://github.com/user-attachments/assets/8ffe90b2-6299-4617-9e37-91d4ff9f3dc0)
+![Screenshot 2025-04-08 at 14-12-38 v0 App](https://github.com/user-attachments/assets/c9b95f20-00a6-4651-b3a2-3c7dc04728bf)
+![Screenshot 2025-04-08 at 14-12-52 v0 App](https://github.com/user-attachments/assets/867e0c82-a960-4b38-b792-239b54e20b52)
+![Screenshot 2025-04-08 at 14-15-13 v0 App](https://github.com/user-attachments/assets/c09fb033-6775-45e7-bfad-890ae7ca731a)
+
 
 #Then you can start the production server:
 npm start
