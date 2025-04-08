@@ -1,0 +1,282 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Screen Styles */
+.screen {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  text-align: center;
+}
+
+.screen.active {
+  display: flex;
+}
+
+/* Menu Screen */
+#menu-screen {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  padding: 40px 20px;
+  border-radius: 10px;
+}
+
+#menu-screen h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #4ecca3;
+  text-shadow: 0 0 10px rgba(78, 204, 163, 0.5);
+}
+
+.credits {
+  margin-bottom: 30px;
+  font-style: italic;
+  color: #eeeeee;
+}
+
+.menu-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 250px;
+}
+
+.menu-btn {
+  padding: 12px;
+  font-size: 1.2rem;
+  background-color: #4ecca3;
+  color: #1a1a2e;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.menu-btn:hover {
+  background-color: #5ddbaf;
+  transform: translateY(-2px);
+}
+
+.menu-btn:active {
+  transform: translateY(0);
+}
+
+/* Game Screen */
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+#game-canvas {
+  border: 3px solid #4ecca3;
+  border-radius: 5px;
+  background-color: #232931;
+}
+
+.notification {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #4ecca3;
+  padding: 15px 25px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: none;
+}
+
+.game-controls {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.direction-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.horizontal-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.control-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #4ecca3;
+  color: #1a1a2e;
+  border: none;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.control-btn:active {
+  transform: scale(0.95);
+}
+
+.action-controls {
+  display: flex;
+  gap: 15px;
+}
+
+.action-btn {
+  padding: 10px 15px;
+  background-color: #4ecca3;
+  color: #1a1a2e;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Settings Screen */
+.settings-options {
+  margin: 30px 0;
+  width: 100%;
+  max-width: 300px;
+}
+
+.setting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.setting select {
+  padding: 8px;
+  background-color: #232931;
+  color: white;
+  border: 1px solid #4ecca3;
+  border-radius: 4px;
+}
+
+.back-btn {
+  padding: 10px 20px;
+  background-color: #4ecca3;
+  color: #1a1a2e;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* About Screen */
+.about-content {
+  text-align: left;
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+.about-content h3 {
+  margin: 15px 0 5px;
+  color: #4ecca3;
+}
+
+.about-content ul {
+  margin-left: 20px;
+}
+
+/* Game Over Screen */
+#game-over-screen h2 {
+  color: #ff6b6b;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#final-score,
+#final-level {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.game-over-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 250px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .screen {
+    padding: 15px;
+  }
+
+  #menu-screen h1 {
+    font-size: 2.5rem;
+  }
+
+  #game-canvas {
+    width: 100%;
+    height: auto;
+  }
+
+  .control-btn {
+    width: 45px;
+    height: 45px;
+  }
+
+  .game-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 400px) {
+  #menu-screen h1 {
+    font-size: 2rem;
+  }
+
+  .menu-btn,
+  .back-btn,
+  .action-btn {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  .control-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}

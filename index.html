@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legendary Snake Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Main Menu -->
+    <div id="menu-screen" class="screen active">
+        <h1>Legendary Snake</h1>
+        <p class="credits">by Emily and cyberghost</p>
+        <div class="menu-buttons">
+            <button id="play-btn" class="menu-btn">Play Game</button>
+            <button id="settings-btn" class="menu-btn">Settings</button>
+            <button id="about-btn" class="menu-btn">About</button>
+        </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="screen">
+        <div class="game-header">
+            <div id="score">Score: 0</div>
+            <div id="level">Level: 1</div>
+            <div id="theme-display">Theme: Forest</div>
+        </div>
+        <canvas id="game-canvas" width="400" height="400"></canvas>
+        <div id="level-up" class="notification">Level Up!</div>
+        <div class="game-controls">
+            <div class="direction-controls">
+                <button id="up-btn" class="control-btn"><i class="fas fa-arrow-up"></i></button>
+                <div class="horizontal-controls">
+                    <button id="left-btn" class="control-btn"><i class="fas fa-arrow-left"></i></button>
+                    <button id="down-btn" class="control-btn"><i class="fas fa-arrow-down"></i></button>
+                    <button id="right-btn" class="control-btn"><i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+            <div class="action-controls">
+                <button id="pause-btn" class="action-btn"><i class="fas fa-pause"></i></button>
+                <button id="menu-btn" class="action-btn">Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Settings Screen -->
+    <div id="settings-screen" class="screen">
+        <h2>Settings</h2>
+        <div class="settings-options">
+            <div class="setting">
+                <label for="difficulty">Difficulty:</label>
+                <select id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+            <div class="setting">
+                <label for="theme">Theme:</label>
+                <select id="theme">
+                    <option value="forest">Forest</option>
+                    <option value="desert">Desert</option>
+                    <option value="snow">Snow</option>
+                    <option value="neon">Neon</option>
+                </select>
+            </div>
+        </div>
+        <button id="settings-back" class="back-btn">Back to Menu</button>
+    </div>
+
+    <!-- About Screen -->
+    <div id="about-screen" class="screen">
+        <h2>About</h2>
+        <div class="about-content">
+            <p>Legendary Snake is an enhanced version of the classic Snake game with multiple levels and themes.</p>
+            <p>Navigate the snake to eat food and grow longer. Be careful not to collide with yourself or obstacles!</p>
+            <p>As you progress through levels, you'll encounter new challenges including villagers running away from your snake.</p>
+            
+            <h3>Controls:</h3>
+            <ul>
+                <li>Arrow keys or on-screen buttons to move</li>
+                <li>P or Pause button to pause the game</li>
+                <li>M or Menu button to return to menu</li>
+            </ul>
+            
+            <h3>Credits:</h3>
+            <p>Created by Emily and cyberghost</p>
+            <p>© 2025 Legendary Snake Game</p>
+        </div>
+        <button id="about-back" class="back-btn">Back to Menu</button>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="game-over-screen" class="screen">
+        <h2>Game Over</h2>
+        <div id="final-score">Score: 0</div>
+        <div id="final-level">Level: 1</div>
+        <div class="game-over-buttons">
+            <button id="play-again" class="menu-btn">Play Again</button>
+            <button id="back-to-menu" class="menu-btn">Back to Menu</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
