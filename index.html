@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Legendary Snake Game</title>
     <link rel="stylesheet" href="styles.css">
+<<<<<<< HEAD
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -99,9 +100,113 @@
         <div class="game-over-buttons">
             <button id="play-again" class="menu-btn">Play Again</button>
             <button id="back-to-menu" class="menu-btn">Back to Menu</button>
+=======
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    <div id="game-wrapper">
+        <div id="menu-screen" class="screen active">
+            <h1>Legendary Snake</h1>
+            <div class="menu-buttons">
+                <button id="start-game">Play Game</button>
+                <button id="open-settings">Settings</button>
+                <button id="open-about">About</button>
+            </div>
+        </div>
+
+        <div id="game-screen" class="screen">
+            <div class="game-header">
+                <div class="game-info">
+                    <div id="level-display">Level: 1</div>
+                    <div id="score-display">Score: 0</div>
+                </div>
+                <div class="theme-indicator" id="current-theme">Theme: Forest</div>
+            </div>
+            
+            <div class="game-container">
+                <canvas id="gameCanvas" width="600" height="600"></canvas>
+                <div id="level-message" class="hidden">Level Complete!</div>
+            </div>
+            
+            <div class="controls">
+                <div class="controls-row">
+                    <button id="up"><i class="fas fa-arrow-up"></i></button>
+                </div>
+                <div class="controls-row">
+                    <button id="left"><i class="fas fa-arrow-left"></i></button>
+                    <button id="down"><i class="fas fa-arrow-down"></i></button>
+                    <button id="right"><i class="fas fa-arrow-right"></i></button>
+                </div>
+                <div class="game-buttons">
+                    <button id="pause"><i class="fas fa-pause"></i></button>
+                    <button id="menu-button">Menu</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="settings-screen" class="screen">
+            <h2>Settings</h2>
+            <div class="settings-container">
+                <div class="setting">
+                    <label for="difficulty">Difficulty:</label>
+                    <select id="difficulty">
+                        <option value="easy">Easy</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+                <div class="setting">
+                    <label for="theme-select">Theme:</label>
+                    <select id="theme-select">
+                        <option value="forest">Forest</option>
+                        <option value="desert">Desert</option>
+                        <option value="snow">Snow</option>
+                        <option value="neon">Neon</option>
+                    </select>
+                </div>
+                <div class="setting">
+                    <label for="sound-toggle">Sound:</label>
+                    <input type="checkbox" id="sound-toggle" checked>
+                </div>
+            </div>
+            <button id="settings-back">Back to Menu</button>
+        </div>
+
+        <div id="about-screen" class="screen">
+            <h2>About Legendary Snake</h2>
+            <div class="about-content">
+                <p>Legendary Snake is an enhanced version of the classic Snake game with multiple levels, themes, and exciting gameplay.</p>
+                <p>Navigate the snake to eat food and grow longer, but be careful not to collide with yourself or obstacles!</p>
+                <p>As you progress through levels, you'll encounter new challenges including villagers running away from your snake!</p>
+                
+                <h3>Controls:</h3>
+                <ul>
+                    <li>Arrow keys or on-screen buttons to move</li>
+                    <li>P or Pause button to pause the game</li>
+                    <li>M or Menu button to return to menu</li>
+                </ul>
+                
+                <h3>Credits:</h3>
+                <p>Created by Emily and cyberghost</p>
+                <p>© 2025 Legendary Snake Game</p>
+            </div>
+            <button id="about-back">Back to Menu</button>
+        </div>
+
+        <div id="game-over-screen" class="screen">
+            <h2>Game Over</h2>
+            <div id="final-score">Score: 0</div>
+            <div id="final-level">Level: 1</div>
+            <button id="restart-game">Play Again</button>
+            <button id="game-over-menu">Back to Menu</button>
+>>>>>>> a76ec0f5241cf8659c264bea9198ff52a98a535a
         </div>
     </div>
 
     <script src="game.js"></script>
+<<<<<<< HEAD
+=======
+    <script src="ui.js"></script>
+>>>>>>> a76ec0f5241cf8659c264bea9198ff52a98a535a
 </body>
 </html>
